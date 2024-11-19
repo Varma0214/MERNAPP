@@ -14,7 +14,7 @@ const ResourceForm = () => {
   useEffect(() => {
     const fetchVendors = async () => {
       try {
-        const response = await axios.get('https://mernapp-six.vercel.app/vendors'); 
+        const response = await axios.get('http://localhost:8080/api/vendors'); 
         setVendors(response.data); // Populate vendors state with the fetched data
       } catch (error) {
         console.error('Error fetching vendors:', error);
@@ -44,7 +44,7 @@ const ResourceForm = () => {
     formData.append('technologies', JSON.stringify(technologies));
 
     try {
-      const response = await axios.post('https://mernapp-six.vercel.app/resources/add', formData, {
+      const response = await axios.post('http://localhost:8080/api/resources/add', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',  
         },
