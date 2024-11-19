@@ -44,7 +44,7 @@ const ResourceForm = () => {
     formData.append('technologies', JSON.stringify(technologies));
 
     try {
-      const response = await axios.post('http://localhost:8080/api/resources/add', formData, {
+      const response = await axios.post('https://mernapp-six.vercel.app/resources/add', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',  
         },
