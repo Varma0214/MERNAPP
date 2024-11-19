@@ -9,7 +9,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchResources = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/resources');
+        const response = await axios.get('https://mernapp-six.vercel.app/resources');
         setResources(response.data);
       } catch (error) {
         console.error("Error fetching data:", error); // Log the error for debugging
