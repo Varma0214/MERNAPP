@@ -14,7 +14,7 @@ const ResourceForm = () => {
   useEffect(() => {
     const fetchVendors = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/vendors'); 
+        const response = await axios.get('https://mernapp-six.vercel.app/vendors'); 
         setVendors(response.data); // Populate vendors state with the fetched data
       } catch (error) {
         console.error('Error fetching vendors:', error);
