@@ -8,7 +8,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors({
-origin:["https://mernapp-six.vercel.app/"],
+origin:["https://mernapp-frontend-blond.vercel.app/vendorform"],
   methods:["POST","GET"],
   credentials:true}
             ));
