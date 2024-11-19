@@ -15,7 +15,7 @@ function VendorForm() {
 
     try {
       // Sending data to backend
-      const response = await axios.post('http://localhost:8080/api/vendors/add', vendorName);
+      const response = await axios.post('https://mernapp-six.vercel.app/vendors/add', vendorName);
       setMessage(response.data.message); // Success message
       setVendorName({ name: '' }); // Reset form
     } catch (err) {
