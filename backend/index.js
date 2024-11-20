@@ -12,7 +12,7 @@ origin:"*",
   credential:true},
   methods:["GET","POST"],
   
-            ));
+             }));
 require("./models/db")
 app.use(express.json());
 app.use('/api/resources', resourceRoutes);
