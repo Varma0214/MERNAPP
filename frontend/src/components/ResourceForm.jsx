@@ -10,20 +10,19 @@ const ResourceForm = () => {
   const [vendors, setVendors] = useState([]);
   const [message, setMessage] = useState('');
 
-  // Fetch vendors when the component mounts
   useEffect(() => {
     const fetchVendors = async () => {
       try {
         const response = await axios.get('http://localhost:8080/api/vendors'); 
-        setVendors(response.data); // Populate vendors state with the fetched data
+        setVendors(response.data); 
       } catch (error) {
         console.error('Error fetching vendors:', error);
       }
     };
     fetchVendors();
-  }, []); // Empty dependency array ensures this runs only once when the component mounts
+  }, []); 
 
-  // Handle technology checkbox change
+
   const handleTechnologyChange = (e) => {
     const { value, checked } = e.target;
     if (checked) {
@@ -33,7 +32,7 @@ const ResourceForm = () => {
     }
   };
 
-  // Handle form submission
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     

@@ -12,13 +12,14 @@ function VendorForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      // Sending data to backend
+      console.log("Submitting data:", vendorName);  
+
       const response = await axios.post('http://localhost:8080/api/vendors/add', vendorName);
-      setMessage(response.data.message); // Success message
-      setVendorName({ name: '' }); // Reset form
+      setMessage(response.data.message); 
+      setVendorName({ name: '' }); 
     } catch (err) {
+      console.error('Error details:', err);
       setMessage(err.response ? err.response.data.error : 'Error submitting form.');
     }
   };

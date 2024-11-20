@@ -12,7 +12,7 @@ const Dashboard = () => {
         const response = await axios.get('http://localhost:8080/api/resources');
         setResources(response.data);
       } catch (error) {
-        console.error("Error fetching data:", error); // Log the error for debugging
+        console.error("Error fetching data:", error);
         setError('Error fetching data. Please try again later.');
       }
     };
