@@ -19,6 +19,9 @@ app.use('/api/resources', resourceRoutes);
 app.use('/api/vendors', vendorRoutes);
 
 const PORT = process.env.PORT || 8080;
+app.get('/ping', (req, res) => {
+    res.send('PONG');
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
