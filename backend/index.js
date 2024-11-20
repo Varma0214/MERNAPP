@@ -8,9 +8,10 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors({
-origin:["https://mernapp-frontend-blond.vercel.app"],
-  methods:["POST","GET"],
-  credentials:true}
+origin:"*",
+  credential:true},
+  methods:["GET","POST"],
+  
             ));
 require("./models/db")
 app.use(express.json());
