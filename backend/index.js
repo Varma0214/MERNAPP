@@ -7,12 +7,7 @@ const cors = require('cors');
 
 
 const app = express();
-app.use(cors({
-origin:"*",
-  credential:true},
-  methods:["GET","POST"],
-  
-             }));
+app.use(cors());
 require("./models/db")
 app.use(express.json());
 app.use('/api/resources', resourceRoutes);
